@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Khaled Al-Qushti — Personal Site</title>
+  <meta name="description" content="Bilingual personal website (EN/AR) with smooth transitions, modern fonts, and easy edits." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#hero"><span id="brandText">Khaled Al‑Qushti</span></a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#certs">Certifications</a>
+      <a href="#affiliations">Affiliations</a>
+      <a href="#languages">Languages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="controls">
+      <button id="downloadCV" class="ghost">Download CV</button>
+      <button id="langToggle" aria-label="Toggle language">العربية</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero (centered) -->
+    <section id="hero" class="section hero">
+      <div class="hero-card">
+        <div class="avatar-wrap">
+          <img id="avatar" class="avatar" src="assets/profile-placeholder.jpg" alt="Profile photo" />
+        </div>
+        <div class="hero-text">
+          <h1 class="name">Khaled Al‑Qushti</h1>
+          <h2 class="title">Shari’a Audit & Compliance Leader</h2>
+          <p class="subtitle">CSAA Fellow — AAOIFI | Business Development & Advisory</p>
+          <p class="lede">
+            Delivering robust shari’a governance, internal audit excellence, and advisory across Islamic banking.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn primary">Let’s talk</a>
+            <a href="#projects" class="btn">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-text ar" dir="rtl">
+          <h1 class="name">خالد القشطي</h1>
+          <h2 class="title">مدير التدقيق والامتثال الشرعي</h2>
+          <p class="subtitle">زمالة CSAA من أيوفي | تطوير الأعمال وتقديم الاستشارات</p>
+          <p class="lede">
+            أقدّم حوكمة شرعية متينة، وتميّزًا في المراجعة والتدقيق، واستشارات للقطاع المصرفي الإسلامي.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn primary">لنتواصل</a>
+            <a href="#projects" class="btn">استعراض المشاريع</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h3 class="section-title">About</h3>
+      <div class="grid two">
+        <p>
+          Islamic banking professional specializing in shari’a audit, internal audit, and compliance.
+          Practitioner of data-driven reporting and governance frameworks.
+        </p>
+        <p class="ar" dir="rtl">
+          متخصص في التدقيق والتدقيق الداخلي والامتثال الشرعي، مع خبرة في تطوير الأعمال وتقديم الاستشارات،
+          ومهارات في إعداد التقارير المعتمدة على البيانات وأُطر الحوكمة.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h3 class="section-title">Skills</h3>
+      <ul class="tags" id="skillsList"></ul>
+      <h3 class="section-title ar" dir="rtl">المهارات</h3>
+      <ul class="tags ar" id="skillsListAr" dir="rtl"></ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h3 class="section-title">Experience</h3>
+      <div id="expTimeline" class="timeline"></div>
+
+      <h3 class="section-title ar" dir="rtl">الخبرات</h3>
+      <div id="expTimelineAr" class="timeline ar" dir="rtl"></div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h3 class="section-title">Projects</h3>
+      <div id="projectsGrid" class="grid three"></div>
+
+      <h3 class="section-title ar" dir="rtl">المشاريع</h3>
+      <div id="projectsGridAr" class="grid three ar" dir="rtl"></div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h3 class="section-title">Education</h3>
+      <div id="eduList" class="cards"></div>
+
+      <h3 class="section-title ar" dir="rtl">التعليم</h3>
+      <div id="eduListAr" class="cards ar" dir="rtl"></div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs" class="section">
+      <h3 class="section-title">Certifications</h3>
+      <ul id="certList" class="bullets"></ul>
+
+      <h3 class="section-title ar" dir="rtl">الشهادات</h3>
+      <ul id="certListAr" class="bullets ar" dir="rtl"></ul>
+    </section>
+
+    <!-- Affiliations -->
+    <section id="affiliations" class="section">
+      <h3 class="section-title">Affiliations</h3>
+      <ul id="affList" class="bullets"></ul>
+
+      <h3 class="section-title ar" dir="rtl">العضويات والانتماءات</h3>
+      <ul id="affListAr" class="bullets ar" dir="rtl"></ul>
+    </section>
+
+    <!-- Languages -->
+    <section id="languages" class="section">
+      <h3 class="section-title">Languages</h3>
+      <ul id="langList" class="bullets"></ul>
+
+      <h3 class="section-title ar" dir="rtl">اللغات</h3>
+      <ul id="langListAr" class="bullets ar" dir="rtl"></ul>
+    </section>
+
+    <!-- Contact (centered) -->
+    <section id="contact" class="section contact">
+      <h3 class="section-title">Contact</h3>
+      <div class="contact-cards center">
+        <a id="linkedinLink" class="card" target="_blank" rel="noopener">
+          <span class="label">LinkedIn</span>
+          <span class="value">Profile</span>
+        </a>
+        <a id="whatsappLink" class="card" target="_blank" rel="noopener">
+          <span class="label">WhatsApp</span>
+          <span class="value">Chat</span>
+        </a>
+        <a id="emailLink" class="card">
+          <span class="label">Email</span>
+          <span class="value" id="emailValue"></span>
+        </a>
+      </div>
+
+      <h3 class="section-title ar" dir="rtl">التواصل</h3>
+      <div class="contact-cards center">
+        <a id="linkedinLinkAr" class="card" target="_blank" rel="noopener" dir="rtl">
+          <span class="label">لينكدإن</span>
+          <span class="value">الملف</span>
+        </a>
+        <a id="whatsappLinkAr" class="card" target="_blank" rel="noopener" dir="rtl">
+          <span class="label">واتساب</span>
+          <span class="value">محادثة</span>
+        </a>
+        <a id="emailLinkAr" class="card" dir="rtl">
+          <span class="label">بريد إلكتروني</span>
+          <span class="value" id="emailValueAr"></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; <span id="year"></span> <span>Made with ♥ by</span> <span id="brandFoot">Khaled Al‑Qushti</span></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
